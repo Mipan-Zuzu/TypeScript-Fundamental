@@ -3,6 +3,7 @@ export type ID = string | number
 export type Categories = {
     id: ID | boolean
     name: string
+    desc? : string
 }
 
 export type Barang = {
@@ -11,6 +12,7 @@ export type Barang = {
     price: number
     categories: Categories
     isAvailable: boolean
+    desc?: string 
 }
 
 export type rand1 = string | number

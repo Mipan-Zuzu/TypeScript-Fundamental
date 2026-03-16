@@ -4,7 +4,8 @@ describe('type Alias', () => {
   it("should type alias", () => {
     const categories: Categories = {
         id : "ZXgYJiPKQEn79",
-        name: "Samphoo"
+        name: "Samphoo",
+        desc: "category for barang is shampoo"
     }
 
     const barang: Barang = {
@@ -12,7 +13,7 @@ describe('type Alias', () => {
         name: "TRESEME",
         price: 200000,
         categories: categories,
-        isAvailable: true
+        isAvailable: true,
     }
 
     console.info(barang)
