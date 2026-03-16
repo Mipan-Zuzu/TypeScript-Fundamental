@@ -12,4 +12,10 @@ describe('Array', () => {
 
     // activity[0] = "suki" //Error
   })
+
+  it("shouuld use tupple", () => {
+    const cars : readonly [string, string, number] = ["audi", "BMW", 2]
+    console.info(cars)
+  })
+
 })
