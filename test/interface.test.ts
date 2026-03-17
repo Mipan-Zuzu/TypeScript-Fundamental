@@ -40,4 +40,30 @@ describe('interface', () => {
     expect(sayThat("mipan", 10)).toBe("mipan 10")
 
   })
+
+  it("should support indexable interface", () => {
+    
+    interface Arrays {
+        [index: number] : string
+    }
+
+    const cars:Arrays = ["lightingmequen", "maker"]
+    console.log(cars)
+
+  })
+
+  it("should use Object", () => {
+
+    interface StringDectonary {
+        [key: string] : string
+    }
+
+    const dictonary:StringDectonary = {
+        name: "mipan",
+        address: "jalan bumi linggah"
+    }
+
+    console.info(dictonary["name"])
+
+  })
 })
