@@ -79,4 +79,21 @@ describe('interface', () => {
     console.info(apiweather)
 
   })
+
+  it("sould support function in interface", () => {
+
+    interface Person {
+        names: string
+        sayHello(name:string) : string
+    }
+
+    const person:Person = {
+        names: "mipan",
+        sayHello (name: string): string {
+            return `hello ${name} my name is ${this.names}` //dont use arrow func for use this to get var in an object 
+        }
+    }
+    console.info(person.sayHello("mipanPok3"))
+
+  })
 })
