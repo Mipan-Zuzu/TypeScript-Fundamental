@@ -17,9 +17,27 @@ describe('interface', () => {
         npwp: "23u812",
         ktp: true
     }
-    
+
     console.log(person)
     console.log(client)
+
+  })
+
+  it("should use interface fucntion", () => {
+
+    interface SayHello {
+        (val1:string , val2:number) : string
+    }
+
+    const sayThat:SayHello = (name:string, age:number) : string  => {
+        if(name && age) {
+            return `${name} ${age}`
+        }else{
+            return `gagal`
+        }
+    }
+
+    expect(sayThat("mipan", 10)).toBe("mipan 10")
 
   })
 })
