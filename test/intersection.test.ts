@@ -9,6 +9,5 @@ describe('intersection', () => {
     }
 
     console.info(user)
-
   })
 })
