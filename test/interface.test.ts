@@ -1,3 +1,4 @@
+import type { WeatherApi } from "../src/extending-interface"
 import type { BarangOlshop, Person} from "../src/interface"
 
 describe('interface', () => {
@@ -64,6 +65,18 @@ describe('interface', () => {
     }
 
     console.info(dictonary["name"])
+
+  })
+
+  it("should use extending-interface", () => {
+
+    const apiweather: WeatherApi = {
+        method: "GET",
+        type: "application/json",
+        body: ["bali", "partly Cloud", "30", "wind 3km/h"]
+    }
+
+    console.info(apiweather)
 
   })
 })
