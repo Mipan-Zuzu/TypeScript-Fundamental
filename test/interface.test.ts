@@ -96,4 +96,16 @@ describe('interface', () => {
     console.info(person.sayHello("mipanPok3"))
 
   })
+
+  it("shoudl Type Assertions", () => {
+
+    const shop: any = {
+        name: "suki",
+        address: "jalan mawar harum"
+    }
+
+    const OlShop:Person = shop as Person //memaksa ts untuk yakinin bahwa itu tipe data yg valid dengan as
+    console.log(OlShop)
+
+  })
 })

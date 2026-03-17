@@ -14,3 +14,4 @@ export interface Person {
     readonly npwp: string
     readonly ktp: boolean
 }
+
