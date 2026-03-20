@@ -63,4 +63,13 @@ describe('IF statement', () => {
     }
 
   })
+
+  it("should support while loop", () => {
+
+    let count = 0
+    while(count <= 15){
+        log(count ++)
+    }
+
+  })
 })
