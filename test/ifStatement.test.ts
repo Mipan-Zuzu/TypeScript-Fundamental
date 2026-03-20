@@ -45,4 +45,22 @@ describe('IF statement', () => {
     log(sayHello())
 
   })
+
+  it("should support For loop", () => {
+    
+    const names: string[] = ["mipan", "pok3", "suki"]
+
+    for(let i = 0; i < names.length; i ++) {
+        log(names[i])
+    }
+
+    for(const name of names) {
+        log(name)
+    }
+
+    for(const index in names){
+        log(names[index])
+    }
+
+  })
 })
