@@ -1,4 +1,5 @@
 describe('IF statement', () => {
+    const log = console.log
   it("should suppoer IF statement", () => {
 
     const counting = (count: number, countBack: (num: number) => string): string => {
@@ -12,4 +13,17 @@ describe('IF statement', () => {
     })).toBe("number 10")
 
   })
+  it("should support ternary operator", () => {
+
+    const count: number = 90
+    const counting = (counts: number): string => {
+        const result: string = counts >= 80 ? "angka lebih besar dari 80" : "angka kurang dari 80"
+        return result
+    }
+
+    log(counting(count))
+
+  })
+
+ 
 })
