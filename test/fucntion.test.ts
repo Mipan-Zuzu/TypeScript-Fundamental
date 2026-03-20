@@ -49,4 +49,29 @@ describe('function', () => {
     expect(sayHello("mipan", "suki")).toBe("helo mipan suki")
 
   })
+
+  it("should support function overloading", () => {
+
+    function callMe(value: string) : string;
+    function callMe(value: number) : number;
+    function callMe(value: any) {
+        if(typeof value === "string") {
+            return value
+        }else if(typeof value === "number"){
+            return value
+        }
+    }
+
+  })
+
+  it("support function as parameter", () => {
+
+    const sayHello = (name: string, filter : (name: string) => string) => `Hello ${filter(name)}`
+    const toUpper = (name: string): string => name.toUpperCase()
+
+    expect(sayHello("mipan", toUpper)).toBe("Hello MIPAN")
+    expect(sayHello("suki", (name: string): string => {
+      return name.toUpperCase()
+    })).toBe("Hello SUKI")
+  })
 })
