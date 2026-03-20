@@ -25,5 +25,24 @@ describe('IF statement', () => {
 
   })
 
- 
+  it("should support switch statement", () => {
+    
+    const sayHello = (name?: string): string => {
+        switch (name) {
+            case "mipan" : 
+                return `halo mipan`
+                break
+            case "suki" : 
+                return `halo suki`
+                break
+            default :
+                return `halo`
+        }
+    }
+
+    log(sayHello("mipan"))
+    log(sayHello("suki"))
+    log(sayHello())
+
+  })
 })
